@@ -24,7 +24,9 @@ const BarChartView = () => {
 
   useEffect(() => {
     const getData = async () => {
-      const res = await fetch("http://localhost:4500/api/years-data");
+      const res = await fetch(
+        "https://blackcoffer-backend-chaitanya.onrender.com/api/years-data"
+      );
       const resData = await res.json();
       setTableData(resData);
     };

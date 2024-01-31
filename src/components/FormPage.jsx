@@ -14,7 +14,7 @@ const FormPage = () => {
   const getData = useCallback(async () => {
     try {
       const response = await fetch(
-        `http://localhost:4500/api/data?search=${search}&country=${country}&likelihood=${likelihood}&sector=${sector}&pestle=${pestle}`
+        `https://blackcoffer-backend-chaitanya.onrender.com/api/data?search=${search}&country=${country}&likelihood=${likelihood}&sector=${sector}&pestle=${pestle}`
       );
       const data = await response.json();
       setTableData(data);
